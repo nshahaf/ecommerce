@@ -1,12 +1,16 @@
-//grayScale
-$clr01: hsl(0, 0%, 100%);
-$clr02: hsl(270, 3%, 87%);
-$clr03: hsl(279, 6%, 55%);
-$clr04: hsl(278, 68%, 11%);
+//Neutral
+$clr00:  hsl(0, 0%, 0%);
+$clr01:  hsl(220, 13%, 13%);
+$clr02: hsl(219, 9%, 45%);
+$clr03: hsl(220, 14%, 75%);
+$clr04: hsl(223, 64%, 98%);
+$clr05: hsl(0, 0%, 100%);
+
 
 // colors
-$clr-red: hsl(0, 100%, 66%);
-$gradient: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+$clr-orange: hsl(26, 100%, 55%);
+$clr-orange-light: hsl(25, 100%, 94%);
+
 // Breakpoints
 $mobile-breakpoint: 375px;
 $narrow-breakpoint: 800px;

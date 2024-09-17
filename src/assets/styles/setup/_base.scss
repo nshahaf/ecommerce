@@ -5,15 +5,12 @@
 }
 
 html {
-  font-family: circular;
+  font-family: kombh;
+  font-size: 16px;
 }
 
 body {
-  font-size: 14px;
-
-  @include for-narrow-layout {
-    font-size: 18px;
-  }
+ 
 }
 
 h1,
@@ -22,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 0.6em;
+  margin: 0;
   line-height: 1;
 }
 
@@ -35,8 +32,7 @@ img {
 }
 
 p {
-  margin: 0 0 1em;
-  max-width: 40ch;
+  margin: 0;
 }
 
 a {
@@ -49,11 +45,11 @@ a:hover {
 }
 
 button {
-  font-family: circular;
+  font-family: kombh;
 }
 
 input {
-  font-family: circular;
+  font-family: kombh;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
