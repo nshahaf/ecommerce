@@ -1,0 +1,40 @@
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90px;
+  justify-content: space-between;
+
+  border-bottom: 1px solid $clr03;
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+      .logo {
+        margin-inline-end: 25px;
+      }
+
+    a {
+      font-size: 13px;
+    }
+  }
+
+  .cart {
+    gap: 36px;
+    .icon {
+      scale: 0.9;
+    }
+
+    .img-container {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid black;
+      background-image: url("/src/assets/images/image-avatar.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}

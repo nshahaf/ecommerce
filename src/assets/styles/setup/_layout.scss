@@ -1,4 +1,23 @@
 
+  .app-container{
+    display: grid;
+    grid-template-columns: 1fr 890px 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+
+    & > * {
+      grid-column: 2;
+    }
+
+    header {
+      grid-row: 1;
+    }
+
+    main{
+      grid-row: 2;
+    }
+  }
+
   @include for-narrow-layout {
    
   }
