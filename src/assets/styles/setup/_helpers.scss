@@ -1,0 +1,53 @@
+
+.text-center {
+    text-align: center;
+}
+
+// flex helpers
+
+.flex {
+
+    display: flex;
+
+    >*.full {
+        flex: 1;
+    }
+
+    
+    &.column {
+        flex-direction: column;
+    }
+
+    &.justify-center {
+        justify-content: center;
+    }
+
+    &.justify-end{
+        justify-content: end;
+    }
+
+    &.space-between{
+        justify-content: space-between;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+}
+
+
+// List
+.clean-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.dev {
+    border: 1px solid red;
+}
+
