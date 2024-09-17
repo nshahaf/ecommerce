@@ -15,6 +15,20 @@
 
     main{
       grid-row: 2;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-inline: 40px;
+      gap: 100px;
+
+      .gallery{
+        grid-column: 1;
+      }
+
+      .product-info {
+        grid-column: 2;
+
+      }
     }
   }
 

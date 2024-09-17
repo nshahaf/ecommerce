@@ -1,6 +1,6 @@
 
 export default function ProductInfo() {
   return (
-    <div>ProductInfo</div>
+    <div className="product-info">ProductInfo</div>
   )
 }
