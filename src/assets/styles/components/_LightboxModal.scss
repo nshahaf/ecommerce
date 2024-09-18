@@ -1,0 +1,25 @@
+.lightbox-container {
+    
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: grid;
+    place-items: center;
+
+    // display: none;
+    .lightbox-modal{
+         
+        .gallery{
+            width: 500px;
+
+            .sub-img{
+                height: 100px;
+            }
+
+                   
+        }
+        
+    }
+  }

@@ -1,47 +1,47 @@
 import { useState } from "react";
+import IconClose from "../assets/icons/icon-close.svg?react";
+import IconNext from "../assets/icons/icon-next.svg?react";
+import IconPrev from "../assets/icons/icon-previous.svg?react";
 
-export default function Gallery() {
-  const [mainImgUrl, setMainImgUrl] = useState(
-    "/src/assets/images/image-product-1.jpg"
-  );
-  const [selectedIndex, setSelectedIndex] = useState(0);
+import useGalleryStore from '../../stores/store.js'; 
 
-  const images = [
-    {
-      thumbnail: "/src/assets/images/image-product-1-thumbnail.jpg",
-      full: "/src/assets/images/image-product-1.jpg",
-    },
-    {
-      thumbnail: "/src/assets/images/image-product-2-thumbnail.jpg",
-      full: "/src/assets/images/image-product-2.jpg",
-    },
-    {
-      thumbnail: "/src/assets/images/image-product-3-thumbnail.jpg",
-      full: "/src/assets/images/image-product-3.jpg",
-    },
-    {
-      thumbnail: "/src/assets/images/image-product-4-thumbnail.jpg",
-      full: "/src/assets/images/image-product-4.jpg",
-    },
-  ];
+export default function Gallery({ setIsModalOpen, controls=false }) {
+  const {images, activeImgUrl, activeIndex, setActiveImg } = useGalleryStore();
 
-  const handleClick = (index) => {
-    setMainImgUrl(images[index].full);
-    setSelectedIndex(index);
+  const handleClick = (image, index) => {
+    setActiveImg(image, index);
+  };
+
+  const handleModal = (event, isOpen) => {
+    event.stopPropagation();
+    setIsModalOpen(isOpen);
   };
 
   return (
     <div className="gallery">
-      <div className="main-img">
-        <img src={mainImgUrl} alt="main img" />
+      <div className="main-img" onClick={(e) => handleModal(e, true)}>
+        <img src={activeImgUrl} alt="main img" />
+        {controls && (
+          <>
+            <div className="close-btn" onClick={(e) => handleModal(e, false)}>
+              <IconClose />
+            </div>
+            <div className="next-btn">
+              <IconNext />
+            </div>
+            <div className="prev-btn">
+              <IconPrev />
+            </div>
+          </>
+        )}
       </div>
 
       <div className="sub-img-container">
         {images.map((image, index) => (
           <div
             key={index}
-            className={`sub-img ${selectedIndex === index ? "selected" : ""}`}
-            onClick={() => handleClick(index)}
+            className={`sub-img ${activeIndex === index ? "selected" : ""}`}
+            onClick={() => handleClick(image.full,index)}
           >
             <img src={image.thumbnail} alt={`Sub image ${index + 1}`} />
           </div>
