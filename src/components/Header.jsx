@@ -6,7 +6,7 @@ export default function Header() {
     <header>
       <nav className="flex align-center">
         <Logo className="logo"/>
-        <a href="#">Collection</a>
+        <a href="#">Collections</a>
         <a href="#">Men</a>
         <a href="#">Women</a>
         <a href="#">About</a>

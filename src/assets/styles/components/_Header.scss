@@ -8,15 +8,16 @@ header {
   border-bottom: 1px solid $clr03;
 
   nav {
+    margin-bottom: 4px;
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 26px;
       .logo {
-        margin-inline-end: 25px;
+        margin-inline-end: 22px;
       }
 
     a {
-      font-size: 13px;
+      font-size: 12px;
     }
   }
 
@@ -24,6 +25,7 @@ header {
     gap: 36px;
     .icon {
       scale: 0.9;
+      cursor: pointer;
     }
 
     .img-container {

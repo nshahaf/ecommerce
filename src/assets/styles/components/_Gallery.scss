@@ -1,7 +1,6 @@
 .gallery {
-    padding-block: 72px;
   .main-img {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
   .sub-img-container {
     display: flex;
@@ -10,5 +9,16 @@
   }
   .sub-img {
     width: 20%;
+    height: 70px;
+    border-radius: 10px;
+    cursor: pointer;
+
+   
+    &.selected {
+      outline: 3px solid $clr-orange;
+      img {
+        opacity: 0.5;
+      }
+    }
   }
 }
