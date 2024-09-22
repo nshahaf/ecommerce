@@ -1,20 +1,21 @@
-import { useState } from "react";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import LightboxModal from "./components/LightboxModal";
 import ProductInfo from "./components/ProductInfo";
+import useGalleryStore from "../stores/gallery-store";
 
+ 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const {isModalOpen} = useGalleryStore()
   return (
     <>
       <div className="app-container">
         <Header />
         <main>
-          <Gallery setIsModalOpen={setIsModalOpen}/>
+          <Gallery/>
           <ProductInfo />
         </main>
-        {isModalOpen && <LightboxModal setIsModalOpen={setIsModalOpen}/>}
+        {isModalOpen && <LightboxModal />}
       </div>
     </>
   );

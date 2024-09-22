@@ -6,22 +6,24 @@ header {
   justify-content: space-between;
 
   border-bottom: 1px solid $clr03;
+  position: relative;
 
   nav {
-    margin-bottom: 4px;
     display: flex;
     align-items: center;
+    margin-bottom: 4px;
     gap: 26px;
-      .logo {
-        margin-inline-end: 22px;
-      }
 
+    .logo {
+      margin-inline-end: 22px;
+    }
     a {
       font-size: 12px;
     }
   }
 
   .cart {
+    position: relative;
     gap: 36px;
     .icon {
       scale: 0.9;
@@ -36,6 +38,21 @@ header {
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+    }
+
+    .cart-item-indicator {
+      position: absolute;
+      top: 25px;
+      right: 65px;
+
+      display: grid;
+      place-items: center;
+      font-size: 8px;
+      width: 12px;
+      aspect-ratio: 1;
+      font-weight: 600;
+      border-radius: 50%;
+      background-color: $clr-orange;
     }
   }
 }

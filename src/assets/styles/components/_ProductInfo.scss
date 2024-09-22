@@ -101,6 +101,11 @@
                     height: 14px;
                 }
             }
+
+            &:disabled {
+                background-color: $clr04;
+                cursor: context-menu;
+            }
         }
         
 
