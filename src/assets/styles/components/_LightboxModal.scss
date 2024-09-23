@@ -1,18 +1,37 @@
 .lightbox-container {
     
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.85);
 
     display: grid;
     place-items: center;
 
     // display: none;
     .lightbox-modal{
-         
+        
+        
         .gallery{
-            width: 500px;
+            width: 95%;
+            margin-inline: auto;
+            @include for-normal-layout{
+                width: 500px;
+            }
+            
+
+            .main-img{
+                .close-btn{
+                    display: block;
+
+
+                }
+                .next-btn,.prev-btn{
+                    display: flex;
+                }
+                .next-btn{}
+                .prev-btn{}
+            }
 
             .sub-img{
                 height: 100px;

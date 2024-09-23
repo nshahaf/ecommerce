@@ -1,19 +1,18 @@
 .gallery {
-  
-
   .main-img {
     position: relative;
     margin-bottom: 22px;
     cursor: pointer;
-    
-    .close-btn{
+
+    .close-btn {
+      display: none;
       position: absolute;
-      right: -20px;
-      top: -20px;
+      right: 5px;
+      top: 5px;
       cursor: pointer;
 
       svg {
-        path{
+        path {
           stroke: $clr00;
           fill: $clr00;
         }
@@ -21,47 +20,52 @@
 
       &:hover {
         svg {
-          path{
+          path {
             stroke: $clr-orange;
             fill: $clr-orange;
           }
         }
       }
-      // display: none;
     }
 
-    .next-btn,.prev-btn{
-      position: absolute;
-      top: 50%;
+    .next-btn,
+    .prev-btn {
+      @include for-narrow-layout {
+        display: flex;
+        position: absolute;
+        top: 50%;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: $clr04;
-      cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $clr04;
+        cursor: pointer;
+      }
+      @include for-normal-layout {
+        display: none;
+      }
 
       &:hover {
         svg {
-          path{
+          path {
             stroke: $clr-orange;
           }
         }
       }
     }
-  
-    .next-btn{
-      right: 0;
+
+    .next-btn {
+      right: 30px;
       translate: +50% -50%;
     }
 
-    .prev-btn{
-      left: 0;
+    .prev-btn {
+      left: 30px;
       translate: -50% -50%;
     }
-
   }
 
   .sub-img-container {
@@ -71,12 +75,19 @@
   }
 
   .sub-img {
-    width: 20%;
-    height: 70px;
-    border-radius: 10px;
-    cursor: pointer;
+    display: none;
 
-   
+    @include for-normal-layout {
+      display: block;
+      height: 120px;
+      width: 20%;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    @include for-wide-layout {
+      height: 70px;
+    }
+
     &.selected {
       outline: 3px solid $clr-orange;
       img {

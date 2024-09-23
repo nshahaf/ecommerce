@@ -1,3 +1,40 @@
+
+  .mobile-nav-btn {
+    padding-inline-start: 3px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    rotate: 90deg;
+    @include for-mobile-layout {display: inline;}
+    @include for-normal-layout{display: none;}
+  }
+
+  .mobile-nav {
+    position: fixed;
+    height: 100vh;
+    z-index: 10;
+    right: -200px; /* Start off-screen */
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+    padding-block: 35px;
+    padding-inline: 0px;
+    color: black;
+    background-color: white;
+    transition: right 0.3s ease, transform 0.3s ease; /* Smooth transition */
+
+    @include for-normal-layout{
+      display: none;
+    }
+  }
+  
+  .mobile-nav.open {
+    right: 0; /* Move into view */
+  }
+  
+
 header {
   display: flex;
   flex-direction: row;
@@ -19,6 +56,10 @@ header {
     }
     a {
       font-size: 12px;
+      display: none;
+      @include for-normal-layout{
+        display: inline;
+      }
     }
   }
 

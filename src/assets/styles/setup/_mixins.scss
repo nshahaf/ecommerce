@@ -1,5 +1,5 @@
 @mixin for-mobile-layout {
-    @media (max-width: calc($mobile-breakpoint)) {
+    @media (max-width: calc($normal-breakpoint)) {
         @content;
     }
 }

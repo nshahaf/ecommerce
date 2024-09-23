@@ -5,11 +5,12 @@ import IconPrev from "../assets/icons/icon-previous.svg?react";
 
 import useGalleryStore from '../../stores/gallery-store.js'; 
 
-export default function Gallery({controls=false}) {
+export default function Gallery({controls=true}) {
   const {images, activeImgUrl, activeIndex, setActiveIndex} = useGalleryStore();
   const setIsModalOpen = useGalleryStore(state => state.setIsModalOpen)
 
-  const handleClick = (index) => {
+  const handleClick = (event, index) => {
+    event.stopPropagation();
     if(index > images.length - 1 || index < 0) return // value guard
     setActiveIndex(index);
   };
@@ -28,10 +29,10 @@ export default function Gallery({controls=false}) {
             <div className="close-btn" onClick={(e) => handleModal(e, false)}>
               <IconClose />
             </div>
-            <div className="next-btn" onClick={() => handleClick(activeIndex + 1)}>
+            <div className="next-btn" onClick={(e) => handleClick(e, activeIndex + 1)}>
               <IconNext />
             </div>
-            <div className="prev-btn" onClick={() => handleClick(activeIndex - 1)}>
+            <div className="prev-btn" onClick={(e) => handleClick(e, activeIndex - 1)}>
               <IconPrev />
             </div>
           </>
@@ -43,7 +44,7 @@ export default function Gallery({controls=false}) {
           <div
             key={index}
             className={`sub-img ${activeIndex === index ? "selected" : ""}`}
-            onClick={() => handleClick(index)}
+            onClick={(e) => handleClick(e,index)}
           >
             <img src={image.thumbnail} alt={`Sub image ${index + 1}`} />
           </div>
