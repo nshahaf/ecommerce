@@ -5,5 +5,5 @@ import svgr from "vite-plugin-svgr";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), svgr()],
-  // base: '/Interactive-card-form/', change on deploy
+  base: '/ecommerce/',
 })
