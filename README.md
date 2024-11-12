@@ -1,6 +1,7 @@
 # Ecommerce shopping cart
 
-A modern look ecommerce site, build with Vite, React and SCSS. 
+This is a solution to the [Frontend Mentor Ecommerce site challenge](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). 
+A modern look Ecommerce site, build with Vite, React and SCSS. 
 
 This project features 
 responsive design, shopping cart functionality, mobile/desktop navbar, lightbox image gallery, Zustand state managment and event handling
