@@ -17,6 +17,9 @@ responsive design, shopping cart functionality, mobile/desktop navbar, lightbox 
 
 You can view the project live at: [Project Page](https://nshahaf.github.io/ecommerce/)
 
+### Screenshot:
+![image](https://github.com/user-attachments/assets/b2f1d45c-e16c-4704-acb1-732eb6c12b4b)
+
 ## Getting Started Locally
 
 To view and run the project on your local machine, follow these instructions:
